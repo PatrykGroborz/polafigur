@@ -21,10 +21,14 @@ def kwadrat():
     kwadrat1 = canvas.create_rectangle(150, 150, 350, 350)
     text = canvas.create_text(110, 250, text="a = ?")
     value = tk.IntVar()
+    label = tk.Label(window, text="Podaj bok a: ")
+    label.pack(side = tk.TOP)
     spinbox = tk.Spinbox(window, from_=0, to=99999999999999999999999, textvariable=value)
     spinbox.pack(side = tk.TOP)
-    button = tk.Button(window)
-    button.pack(side =tk.CENTER)
+    def oblicz():
+
+    button = tk.Button(window, text="Oblicz pole", pady=15)
+    button.pack(pady=20)
 button = tk.Button(frame, text="Kwadrat", command=kwadrat)
 button.pack()
 window.mainloop()
